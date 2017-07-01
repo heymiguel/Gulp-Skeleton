@@ -2,15 +2,130 @@
 
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>LucasAlt</title>
+  <title>Gulp-Skeleton</title>
 
   <!-- Custom CSS -->
   <link href="dist/css/styles.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta name="theme-color" content="#CF4647">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./dist/img/gulp.png">
+
+  <!-- Web Card -->
+  <meta property="og:title" content="Gulp-Skeleton"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://mrdragonxm15.github.io/Gulp-Skeleton/"/>
+  <meta property="og:image" content="https://mrdragonxm15.github.io/Gulp-Skeleton/dist/img/gulp.png"/>
+  <meta property="og:description" content="A little workflow using Gulp and Skeleton"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:url" content="https://mrdragonxm15.github.io/Gulp-Skeleton/">
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@MrDragonXM15"/>
+  <meta name="twitter:title" content="Gulp-Skeleton"/>
+  <meta name="twitter:description" content="A little workflow using Gulp and Skeleton"/>
+  <meta name="twitter:image" content="https://mrdragonxm15.github.io/Gulp-Skeleton/dist/img/gulp.png"/>
 </head>
 
 <body>
 
-    <h1>Hello World</h1>
+  <div id="header_bg"></div>
+  <header>
+    <div id="quick_card" class="card">
+      <div><img id="photo" src="dist/img/gulp.png" /></div>
+      <!-- replace photo in /img/ 705x705 -->
+      <h1 id="name">Gulp-Skeleton</h1>
+      <h2 id="description">A little workflow using Gulp and Skeleton</h2>
+    </div>
+  </header>
+  <main>
+    <div id="about_card" class="card">
+      <section class="tab">
+        <div class="title"><i class="fa fa-list"></i>Prerequisites</div>
+        <div class="content">
+          <section class="element">
+            <div class="name">Need to have NodeJS and npm installed</div>
+            <div class="info">More info <a href="https://nodejs.org/en/">here</a></div>
+          </section>
+          <hr align="left" />
+          <section class="element">
+            <div class="name">Need to have Git installed</div>
+            <div class="info">More info <a href="https://git.github.io/">here</a></div>
+          </section>
+          <!-- You can add more experiences! -->
+        </div>
+      </section>
+      <section class="tab">
+        <div class="title"><i class="fa fa-download"></i>Installation</div>
+        <div class="content">
+          <section class="element">
+            <div class="name">Download the project</div>
+            <div class="info"><div class="code">git clone https://github.com/MrDragonXM15/Gulp-Skeleton.git PROJECTNAME</div></div>
+          </section>
+          <hr align="left" />
+          <section class="element">
+            <div class="name">Go into the folder</div>
+            <div class="info"><div class="code">cd PROJECTNAME</div></div>
+          </section>
+          <hr align="left" />
+          <section class="element">
+            <div class="name">Install all dependencies</div>
+            <div class="info"><div class="code">npm install</div></div>
+          </section>
+          <!-- You can add more education details! -->
+        </div>
+      </section>
+      <section class="tab">
+        <div class="title"><i class="fa fa-terminal"></i>Usage</div>
+        <div class="content">
+          <section class="element">
+            <div class="name">Start a live server</div>
+            <div class="info"><div class="code">gulp</div></div>
+            <div class="info">This launches a server to have a live preview of the changes made.</div>
+          </section>
+          <hr align="left" />
+          <section class="element">
+            <div class="name">Publish your website</div>
+            <div class="info">Publish your <code>/dist/</code> folder and your <code>index.html</code></div>
+          </section>
+        </div>
+      </section>
+      <section class="tab">
+        <div class="title"><i class="fa fa-info-circle"></i>Informations</div>
+        <div class="content">
+          <section class="element">
+            <div class="name">This project uses sass</div>
+            <div class="info">If you want add personnal style, you need to add them to a file called <code>FILENAME.scss</code>. You can add css or scss, it's not a problem.</div>
+          </section>
+          <hr align="left" />
+          <section class="element">
+            <div class="name">Minification</div>
+            <div class="info">The minification is done automatically when saving any file.</div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <div id="contact_card" class="card">
+      <section class="tab">
+        <div class="title"><i class="fa fa-envelope"></i>Contact the author</div>
+        <div class="content">
+          <div class="contacts"><a href="mailto:lucasalbert67@gmail.com"><i class="fa fa-envelope"></i>&nbsp; E-Mail</a></div>
+          <div class="contacts"><a href="https://twitter.com/MrDragonXM15" target="_blank"><i class="fa fa-twitter"></i>&nbsp; Twitter</a></div>
+          <div class="contacts"><a href="https://github.com/MrDragonXM15" target="_blank"><i class="fa fa-github"></i>&nbsp; Github</a></div>
+          <!-- You can add more contacts! -->
+        </div>
+      </section>
+    </div>
+    <a href="https://github.com/MrDragonXM15/Gulp-Skeleton">
+      <div id="fab">&nbsp;<i class="fa fa-download"></i>&nbsp;</div>
+    </a>
+  </main>
+  <footer>
+    <small>© All Rights Reserved, <a href="http://mrdragonxm15.github.io/" target="_blank">LucasAlt</a></small>
+  </footer>
 
   <!-- Place JS here -->
   <script src="dist/js/app.min.js"></script>
