@@ -13,7 +13,7 @@ var browserSync = require('browser-sync').create()
 
 // Compile Jade
 gulp.task('jade', function () {
-  gulp.src('src/*.jade')
+  return gulp.src('src/*.jade')
     .pipe(jade({
       pretty: true
     }))
@@ -23,7 +23,7 @@ gulp.task('jade', function () {
 
 // Configure CSS tasks.
 gulp.task('sass', function () {
-  gulp.src('src/scss/**/*.scss')
+  return gulp.src('src/scss/**/*.scss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(prefix('last 2 versions'))
     .pipe(cssmin())
@@ -35,7 +35,7 @@ gulp.task('sass', function () {
 
 // Configure JS.
 gulp.task('js', function () {
-  gulp.src('src/js/**/*.js')
+  return gulp.src('src/js/**/*.js')
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(rename({suffix: '.min'}))
@@ -45,7 +45,7 @@ gulp.task('js', function () {
 
 // Configure image stuff.
 gulp.task('images', function () {
-  gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'))
     .pipe(browserSync.stream())
