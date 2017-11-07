@@ -1,3 +1,15 @@
 /*! Personal css */
 
 // All Scss goes here.
+
+section {
+  padding: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+input, label{
+  display: inline-block;
+}
