@@ -1,7 +1,6 @@
 'use strict'
 
 var gulp = require('gulp')
-var jade = require('gulp-jade')
 var sass = require('gulp-sass')
 var cssmin = require('gulp-cssmin')
 var rename = require('gulp-rename')
@@ -11,12 +10,9 @@ var concat = require('gulp-concat')
 var imagemin = require('gulp-imagemin')
 var browserSync = require('browser-sync').create()
 
-// Compile Jade
-gulp.task('jade', function () {
-  return gulp.src('src/*.jade')
-    .pipe(jade({
-      pretty: true
-    }))
+// Compile html
+gulp.task('html', function () {
+  return gulp.src('src/*.html')
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream())
 })
@@ -51,12 +47,12 @@ gulp.task('images', function () {
     .pipe(browserSync.stream())
 })
 
-gulp.task('default', ['jade', 'sass', 'js', 'images'], function () {
+gulp.task('default', ['html', 'sass', 'js', 'images'], function () {
   browserSync.init({
     server: './dist'
   })
 
-  gulp.watch('src/*.jade', ['jade'])
+  gulp.watch('src/*.html', ['html'])
   gulp.watch('src/scss/**/*.scss', ['sass'])
   gulp.watch('src/js/**/*.js', ['js'])
   gulp.watch('./dist/*.html').on('change', browserSync.reload)
