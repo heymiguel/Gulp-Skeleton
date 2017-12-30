@@ -18,9 +18,9 @@ function eventHandlers () {
 };
 
 if (document.readyState === 'complete' || document.readyState !== 'loading') {
-  eventHandlers()
+  
 } else {
-  document.addEventListener('DOMContentLoaded', () =>{
+  document.addEventListener('DOMContentLoaded', () => {
     eventHandlers()
   })
 }

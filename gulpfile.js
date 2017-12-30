@@ -13,7 +13,7 @@ const browserSync = require('browser-sync').create()
 
 // Compile html
 gulp.task('html', function () {
-  return gulp.src('src/*.html')
+  return gulp.src('src/**/*.html')
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream())
 })
@@ -56,7 +56,7 @@ gulp.task('default', ['html', 'sass', 'js', 'images'], function () {
     server: './dist'
   })
 
-  gulp.watch('src/*.html', ['html'])
+  gulp.watch('src/**/*.html', ['html'])
   gulp.watch('src/scss/**/*.scss', ['sass'])
   gulp.watch('src/js/**/*.js', ['js']).on('change', browserSync.reload)
   gulp.watch('./dist/*.html').on('change', browserSync.reload)
