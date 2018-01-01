@@ -50,13 +50,13 @@ a{
   color:#616161;
 }
 body{
-  font-size: 16px;
+  font-size: 14px;
   font-family: $body-font-stack;
   font-weight: 400;
 }
 label{
   font-weight: 400;
-  font-family: $header-font-stack;
+  font-family: $body-font-stack;
   color:$not-black;
 }
 input{
@@ -142,6 +142,7 @@ nav{
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  text-align: right;
   @media (min-width: 550px) {
     background-image: url('/img/hero-constellation-desktop.png');
     background-size: contain;
@@ -149,6 +150,7 @@ nav{
     background-position: top right;
     align-items: center;
     justify-content: flex-start;
+    text-align: center;
   }
 
   .landing-blurb{
@@ -170,7 +172,8 @@ nav{
       color: $light-blue;
       top: 80px;
       @media (min-width: 550px) {
-        top: 135px;
+        top: 140px;
+        right: 160px;
       }
       right: 0;
     }
@@ -193,14 +196,9 @@ nav{
     width: 100%;
   }  
   label{
-    width: 30%;
     margin-right: 15px;
     padding: 10px;
     display: inline-block;
-    font-size: .8em;
-    @media (min-width: 550px) {
-      width: 115px;
-    }
   }
   input[type=radio]{
     display: none;
@@ -234,6 +232,7 @@ nav{
       margin: 0;
       width: 50%;
       margin-bottom: 10px;
+      font-family: $header-font-stack;
     }
     input{
       width: 100%;
@@ -263,6 +262,30 @@ nav{
   }
 }
 
+// where when
+
+#where-when{
+  p{
+    margin: 0;
+  }
+  .copy{
+    margin-bottom: 20px;
+  }
+  .times{
+    margin-bottom: 35px;
+  }
+  .blurb{
+    margin-bottom: 35px;
+  }
+  .map{
+    margin-bottom: 35px;
+  }
+  .toronto, .manila{
+    padding: 15px;
+    background: #fbfbfb;
+    margin-bottom: 20px;
+  }
+}
 
 
 
