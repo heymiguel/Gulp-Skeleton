@@ -71,33 +71,53 @@ h3{
   font-style: italic;
 }
 
-.mobile-only{
-  display: block;
-  @media (min-width: 550px) {
-    display: none;
-  }
-}
-
-.desktop-only{
-  display: none;
-  @media (min-width: 550px) {
-    display: block;
-  }
-}
-
-
-
-
 // nav
 
 nav{
   border-bottom: none;
   position: fixed;
+  z-index: 10;
+  a{
+    z-index: 11;
+  }
+  .fa-bars{
+    color: $not-black;
+    font-size: 1.5em;
+    position: fixed;
+    padding: 20px;
+  }
   @media (min-width: 550px) {
     border-bottom: solid 1px #e9e9e9;
     position: relative;
   }
-  // display none and full screen ul li
+  .container{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(95, 95, 95, 0.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    #close-me{
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  &.mobile-only{
+    ul{
+      padding: 20px;
+      width: 100%;
+      li{
+        display: block;
+        font-size: 2em;
+        font-family: $header-font-stack;
+        a{
+          color: white;
+        }
+      }
+    }
+    
+  }
 }
 
 // hero
@@ -112,8 +132,10 @@ nav{
   @media (min-width: 550px) {
     background-image: url('/img/hero-constellation-desktop.png');
     background-size: contain;
-    min-height: 100vh;
+    min-height: 85vh;
     background-position: top right;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .landing-blurb{
@@ -123,7 +145,12 @@ nav{
       font-size: 5em;
       color: $dark-blue;
       margin: 0;
-    }
+        @media (min-width: 550px) {
+    
+            font-size: 8em;
+    
+        }
+    }  
     p{
       position: absolute;
       font-family: $body-font-stack;
@@ -210,5 +237,33 @@ nav{
       margin-bottom: 10px;
       border-bottom: 1px solid $not-black;
     }
+  }
+}
+
+
+
+
+// convenience 
+.mobile-only{
+  display: block;
+  @media (min-width: 550px) {
+    display: none;
+  }
+}
+.desktop-only{
+  display: none;
+  @media (min-width: 550px) {
+    display: block;
+  }
+}
+body{
+  .hide{
+    display: none;
+  }
+  .add-flex{
+    display: flex;
+  }
+  .show{
+    display: block;
   }
 }

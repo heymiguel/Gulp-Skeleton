@@ -15,6 +15,21 @@ function eventHandlers () {
       whereField.value = e.target.value
     })
   })
+
+  const burger = document.getElementById('burger')
+  const closeMe = document.getElementById('close-me')
+  burger.addEventListener('click', e => {
+    e.preventDefault()
+    burger.classList.toggle('hide')
+    closeMe.classList.toggle('hide')
+    document.querySelectorAll('nav.mobile-only .container')[0].classList.toggle('add-flex')
+  })
+  closeMe.addEventListener('click', e => {
+    e.preventDefault(e)
+    burger.classList.toggle('hide')
+    closeMe.classList.toggle('hide')
+    document.querySelectorAll('nav.mobile-only .container')[0].classList.toggle('add-flex')
+  })
 };
 
 if (document.readyState === 'complete' || document.readyState !== 'loading') {
