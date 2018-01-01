@@ -2,6 +2,14 @@
 
 // All Scss goes here.
 
+$dark-blue: #373479;
+$light-blue: #5ac6d0;
+$cursive-font-stack: 'Qwigley', cursive;
+$body-font-stack: 'Libre Baskerville', serif;
+$header-font-stack: 'Alegreya SC', serif;
+
+
+
 
 /* Larger than mobile */
 @media (min-width: 400px) {}
@@ -38,6 +46,9 @@ a{
   text-decoration: none;
   color:#616161;
 }
+body{
+  font-size: 16px;
+}
 
 .mobile-only{
   display: block;
@@ -60,8 +71,48 @@ a{
 
 nav{
   border-bottom: none;
+  position: fixed;
   @media (min-width: 550px) {
-    border-bottom: solid 1px #e9e9e9
+    border-bottom: solid 1px #e9e9e9;
+    position: relative;
   }
-  
+  // display none and full screen ul li
+}
+
+// hero
+.hero{
+  background-image: url('/img/hero-constellation.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 40vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  @media (min-width: 550px) {
+    background-image: url('/img/hero-constellation-desktop.png');
+    background-size: contain;
+    min-height: 100vh;
+    background-position: top right;
+  }
+
+  .landing-blurb{
+    position: relative;
+    h2{
+      font-family: $cursive-font-stack;
+      font-size: 5em;
+      color: $dark-blue;
+      margin: 0;
+    }
+    p{
+      position: absolute;
+      font-family: $header-font-stack;
+      color: $light-blue;
+      top: 75px;
+      right: 0;
+    }
+    span{
+      color: $light-blue;
+      font-size: .6em;
+    }
+  }
 }

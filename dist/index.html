@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Wedding POC</title>
+  <title>Make it so</title>
   <link href="https://fonts.googleapis.com/css?family=Alegreya+SC:400,400i,500,500i,700,700i,800,800i|Libre+Baskerville:400,400i,700|Qwigley" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.min.css">
 </head>
@@ -28,43 +28,51 @@
       </ul>
     </div> 
   </nav>
-  <section class="container">
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://migomakesitso.com/thanks';}"></iframe>
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLScsCmTRfG5sJHONn5O60IPmd6GNVr4OVhr6omEqmRoS3zXWDw/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
-          <ul>
-            <li>
-              <div>
-                  <label for="who-is-going">Who is going?</label>
-                  <input name="entry.1419756406" type="text" id="who-is-going"/>    
-              </div>
-            </li>
-            <li>
-              <div>
-                <label for="how-many">How many?</label>
-                <input name="entry.211712771" type="hidden" id="how-many"/>
-                <input type="radio" name="numguests" value="1" id="one-guest">
-                <label for="one-guest">One Guest</label>
-                <input type="radio" name="numguests" value="2" id="two-guests">
-                <label for="two-guests">Two Guests</label>
-              </div>
-            </li>
-            <li>
-              <div>
+  <main>
+    <section class="hero">
+      <div class="landing-blurb">
+        <h2>Miguel<span>&</span>Yum</h2>
+        <p>the voyage begins</p>
+      </div>
+    </section>
+    <section class="container">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://migomakesitso.com/thanks';}"></iframe>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScsCmTRfG5sJHONn5O60IPmd6GNVr4OVhr6omEqmRoS3zXWDw/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+            <ul>
+              <li>
                 <div>
-                  <label for="where">Where</label>
-                  <input name="entry.1457622341" type="hidden" id="where"/>
-                  <input type="radio" name="location" value="MNL" id="manila">
-                  <label for="manila">Manila</label>
-                  <input type="radio" name="location" value="TOR" id="toronto">
-                  <label for="toronto">Toronto</label>
+                    <label for="who-is-going">Who is going?</label>
+                    <input name="entry.1419756406" type="text" id="who-is-going"/>    
                 </div>
-              </div>
-            </li>
-          </ul>
-          <input class="button" type="submit" value="All done">
-        </form>
-  </section>
-  
+              </li>
+              <li>
+                <div>
+                  <label for="how-many">How many?</label>
+                  <input name="entry.211712771" type="hidden" id="how-many"/>
+                  <input type="radio" name="numguests" value="1" id="one-guest">
+                  <label for="one-guest">One Guest</label>
+                  <input type="radio" name="numguests" value="2" id="two-guests">
+                  <label for="two-guests">Two Guests</label>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <div>
+                    <label for="where">Where</label>
+                    <input name="entry.1457622341" type="hidden" id="where"/>
+                    <input type="radio" name="location" value="MNL" id="manila">
+                    <label for="manila">Manila</label>
+                    <input type="radio" name="location" value="TOR" id="toronto">
+                    <label for="toronto">Toronto</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <input class="button" type="submit" value="All done">
+          </form>
+    </section>
+  </main>
 </body>
 <script src="js/app.min.js"></script>
 </html>
