@@ -44,14 +44,28 @@
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://migomakesitso.com/thanks';}"></iframe>
         <form action="https://docs.google.com/forms/d/e/1FAIpQLScsCmTRfG5sJHONn5O60IPmd6GNVr4OVhr6omEqmRoS3zXWDw/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
             <ul>
+                <li class="where">
+                  <p>which ceremony are you attending?</p>
+                  <div>
+                    <input name="entry.1457622341" id="where" required/>
+                    <input type="radio" name="location" value="MNL" id="manila">
+                    <label for="manila">Manila</label>
+                    <input type="radio" name="location" value="TOR" id="toronto">
+                    <label for="toronto">Toronto</label>
+                    <input type="radio" name="location" value="Nope" id="nope">
+                    <label for="nope">I am not attending</label>
+                  </div>
+                </li>
               <li class="num-guests">
                 <p>number attending:</p>
                 <div>
                   <input name="entry.211712771" id="how-many" required/>
                   <input type="radio" name="numguests" value="1" id="one-guest" required >
-                  <label for="one-guest">One Guest</label>
+                  <label for="one-guest">One</label>
                   <input type="radio" name="numguests" value="2" id="two-guests" >
-                  <label for="two-guests">Two Guests</label>
+                  <label for="two-guests">Two</label>
+                  <input type="radio" name="numguests" value="0" id="no-guest" required >
+                  <label for="no-guest">None</label>
                 </div>
               </li>
               <li class="name">
@@ -60,20 +74,11 @@
                     <input name="entry.1419756406" type="text" id="who-is-going" required/>    
                 </div>
               </li>
-              <li class="where">
-                <p>which ceremony are you attending?</p>
-                <div>
-                  <input name="entry.1457622341" id="where" required/>
-                  <input type="radio" name="location" value="MNL" id="manila">
-                  <label for="manila">Manila</label>
-                  <input type="radio" name="location" value="TOR" id="toronto">
-                  <label for="toronto">Toronto</label>
-                </div>
-              </li>
+              
             </ul>
             <button type="submit" >send</button>
           </form>
-      </div>  
+      </div>
     </section>
   </main>
 </body>

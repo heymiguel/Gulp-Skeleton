@@ -77,6 +77,15 @@ nav{
   border-bottom: none;
   position: fixed;
   z-index: 10;
+  @media (min-width: 550px) {
+    border-bottom: solid 1px #e9e9e9;
+    position: relative;
+  }
+  li{
+    @media (min-width: 550px) {
+      margin: 1em;  
+    }
+  }
   a{
     z-index: 11;
   }
@@ -86,10 +95,6 @@ nav{
     position: fixed;
     padding: 20px;
   }
-  @media (min-width: 550px) {
-    border-bottom: solid 1px #e9e9e9;
-    position: relative;
-  }
   .container{
     width: 100vw;
     height: 100vh;
@@ -97,6 +102,7 @@ nav{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    font-family: $header-font-stack;
     #close-me{
       position: fixed;
       top: 20px;
@@ -105,6 +111,9 @@ nav{
     @media (min-width: 550px) {
       position: fixed;
       height: 5vh;
+      background: white;
+      justify-content: flex-start;
+      padding: 0 20px;
     }
   }
   &.mobile-only{
@@ -150,9 +159,7 @@ nav{
       color: $dark-blue;
       margin: 0;
         @media (min-width: 550px) {
-    
-            font-size: 8em;
-    
+          font-size: 8em;
         }
     }  
     p{
@@ -162,6 +169,9 @@ nav{
       font-size: .75em;
       color: $light-blue;
       top: 80px;
+      @media (min-width: 550px) {
+        top: 135px;
+      }
       right: 0;
     }
     span{
@@ -188,6 +198,9 @@ nav{
     padding: 10px;
     display: inline-block;
     font-size: .8em;
+    @media (min-width: 550px) {
+      width: 115px;
+    }
   }
   input[type=radio]{
     display: none;
@@ -198,6 +211,7 @@ nav{
   }
   .num-guests{
     text-align: center;
+    
     #how-many{
       opacity: 0;
       width: 1px;
@@ -224,10 +238,14 @@ nav{
     input{
       width: 100%;
       font-size: .8em;
+      @media (min-width: 550px) {
+        width: 75%;
+      }
     }
   }
   .where{
     text-align: center;
+    
     #where{
       opacity: 0;
       width: 1px;

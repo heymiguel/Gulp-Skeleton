@@ -36,12 +36,12 @@ function eventHandlers () {
 //   eventHandlers()
 // })
 
-const loader = (evt) => {
+const loader = evt => {
   if (evt.target.readyState === 'interactive') {
     console.log('loading')
   } else if (evt.target.readyState === 'complete') {
     console.log('complete')
-      eventHandlers()
+    eventHandlers()
   }
 }
 
