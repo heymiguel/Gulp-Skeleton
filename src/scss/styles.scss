@@ -102,6 +102,10 @@ nav{
       top: 20px;
       right: 20px;
     }
+    @media (min-width: 550px) {
+      position: fixed;
+      height: 5vh;
+    }
   }
   &.mobile-only{
     ul{
@@ -183,6 +187,7 @@ nav{
     margin-right: 15px;
     padding: 10px;
     display: inline-block;
+    font-size: .8em;
   }
   input[type=radio]{
     display: none;
@@ -203,7 +208,7 @@ nav{
       font-family: $header-font-stack;
       font-size: 1em;
       text-align: left;
-      width: 50%;
+      width: 100%;
       margin-bottom: 10px;
       border-bottom: 1px solid $not-black;
     }

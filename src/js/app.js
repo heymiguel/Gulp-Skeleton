@@ -32,9 +32,17 @@ function eventHandlers () {
   })
 };
 
-if (document.readyState === 'complete' || document.readyState !== 'loading') {
-} else {
-  document.addEventListener('DOMContentLoaded', () => {
-    eventHandlers()
-  })
+// document.addEventListener('DOMContentLoaded', () => {
+//   eventHandlers()
+// })
+
+const loader = (evt) => {
+  if (evt.target.readyState === 'interactive') {
+    console.log('loading')
+  } else if (evt.target.readyState === 'complete') {
+    console.log('complete')
+      eventHandlers()
+  }
 }
+
+document.addEventListener('readystatechange', loader, false)
