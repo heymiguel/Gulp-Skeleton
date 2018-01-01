@@ -4,6 +4,8 @@
 
 $dark-blue: #373479;
 $light-blue: #5ac6d0;
+$off-white: #fbfbfb;
+$not-black: #3c3c3c;
 $cursive-font-stack: 'Qwigley', cursive;
 $body-font-stack: 'Libre Baskerville', serif;
 $header-font-stack: 'Alegreya SC', serif;
@@ -42,12 +44,31 @@ input, label{
   display: inline-block;
 }
 
+
 a{
   text-decoration: none;
   color:#616161;
 }
 body{
   font-size: 16px;
+  font-family: $body-font-stack;
+  font-weight: 400;
+}
+label{
+  font-weight: 400;
+  font-family: $header-font-stack;
+  color:$not-black;
+}
+input{
+  font-family: $body-font-stack;
+}
+
+
+h3{
+  font-family: $header-font-stack;
+  font-size: 2em;
+  color: $light-blue;
+  font-style: italic;
 }
 
 .mobile-only{
@@ -84,7 +105,7 @@ nav{
   background-image: url('/img/hero-constellation.png');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 40vh;
+  min-height: 50vh;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -105,14 +126,89 @@ nav{
     }
     p{
       position: absolute;
-      font-family: $header-font-stack;
+      font-family: $body-font-stack;
+      text-transform: uppercase;
+      font-size: .75em;
       color: $light-blue;
-      top: 75px;
+      top: 80px;
       right: 0;
     }
     span{
       color: $light-blue;
       font-size: .6em;
+    }
+  }
+}
+
+
+// rsvp
+.rsvp{
+  background: $off-white;
+  input{
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+  }
+  li{
+    width: 100%;
+  }  
+  label{
+    width: 30%;
+    margin-right: 15px;
+    padding: 10px;
+    display: inline-block;
+  }
+  input[type=radio]{
+    display: none;
+    &:checked + label{
+      background: $light-blue;
+      color: $dark-blue;
+    }
+  }
+  .num-guests{
+    text-align: center;
+    #how-many{
+      opacity: 0;
+      width: 1px;
+    }
+    p{
+      padding: 0;
+      margin: 0;
+      font-family: $header-font-stack;
+      font-size: 1em;
+      text-align: left;
+      width: 50%;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $not-black;
+    }
+  }
+  .name{
+    label{
+      display: block;
+      padding: 0;
+      margin: 0;
+      width: 50%;
+      margin-bottom: 10px;
+    }
+    input{
+      width: 100%;
+      font-size: .8em;
+    }
+  }
+  .where{
+    text-align: center;
+    #where{
+      opacity: 0;
+      width: 1px;
+    }
+    p{
+      padding: 0;
+      margin: 0;
+      font-family: $header-font-stack;
+      font-size: 1em;
+      text-align: left;
+      width: 100%;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $not-black;
     }
   }
 }
