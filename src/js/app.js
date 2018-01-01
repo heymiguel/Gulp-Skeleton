@@ -18,7 +18,6 @@ function eventHandlers () {
 };
 
 if (document.readyState === 'complete' || document.readyState !== 'loading') {
-  
 } else {
   document.addEventListener('DOMContentLoaded', () => {
     eventHandlers()

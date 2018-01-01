@@ -2,14 +2,66 @@
 
 // All Scss goes here.
 
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+
 section {
   padding: 30px;
 }
 
 ul {
   list-style: none;
+  li{
+    display: inline-block;
+  }
 }
 
 input, label{
   display: inline-block;
+}
+
+a{
+  text-decoration: none;
+  color:#616161;
+}
+
+.mobile-only{
+  display: block;
+  @media (min-width: 550px) {
+    display: none;
+  }
+}
+
+.desktop-only{
+  display: none;
+  @media (min-width: 550px) {
+    display: block;
+  }
+}
+
+
+
+
+// nav
+
+nav{
+  border-bottom: none;
+  @media (min-width: 550px) {
+    border-bottom: solid 1px #e9e9e9
+  }
+  
 }
