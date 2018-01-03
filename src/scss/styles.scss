@@ -370,6 +370,19 @@ nav{
   }
 }
 body{
+  .loading{
+    position: fixed;
+    background: white;
+    z-index: 100;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 10%;
+    }
+  }
   .hide{
     display: none;
   }
@@ -379,4 +392,5 @@ body{
   .show{
     display: block;
   }
+  
 }

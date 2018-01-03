@@ -46,9 +46,8 @@ function eventHandlers () {
 
 const loader = evt => {
   if (evt.target.readyState === 'interactive') {
-    console.log('loading')
   } else if (evt.target.readyState === 'complete') {
-    console.log('complete')
+    document.getElementsByClassName('loading')[0].classList.add('hide')
     eventHandlers()
   }
 }
