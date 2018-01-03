@@ -40,10 +40,6 @@ function eventHandlers () {
   })
 };
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   eventHandlers()
-// })
-
 const loader = evt => {
   if (evt.target.readyState === 'interactive') {
   } else if (evt.target.readyState === 'complete') {
