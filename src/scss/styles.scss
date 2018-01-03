@@ -10,9 +10,6 @@ $cursive-font-stack: 'Qwigley', cursive;
 $body-font-stack: 'Libre Baskerville', serif;
 $header-font-stack: 'Alegreya SC', serif;
 
-
-
-
 /* Larger than mobile */
 @media (min-width: 400px) {}
 
@@ -27,7 +24,6 @@ $header-font-stack: 'Alegreya SC', serif;
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
-
 
 section {
   padding: 30px;
@@ -50,7 +46,7 @@ a{
   color:#616161;
 }
 body{
-  font-size: 14px;
+  font-size: 16px;
   font-family: $body-font-stack;
   font-weight: 400;
 }
@@ -80,6 +76,7 @@ nav{
   @media (min-width: 550px) {
     border-bottom: solid 1px #e9e9e9;
     position: relative;
+    height: 55px;
   }
   li{
     @media (min-width: 550px) {
@@ -109,7 +106,6 @@ nav{
       right: 20px;
     }
     @media (min-width: 550px) {
-      position: fixed;
       height: 5vh;
       background: white;
       justify-content: flex-start;
@@ -172,8 +168,7 @@ nav{
       color: $light-blue;
       top: 80px;
       @media (min-width: 550px) {
-        top: 140px;
-        right: 160px;
+        position: static;
       }
       right: 0;
     }
@@ -199,6 +194,7 @@ nav{
     margin-right: 15px;
     padding: 10px;
     display: inline-block;
+    background: #e8e8e8;
   }
   input[type=radio]{
     display: none;
@@ -233,6 +229,7 @@ nav{
       width: 50%;
       margin-bottom: 10px;
       font-family: $header-font-stack;
+      background: $off-white;
     }
     input{
       width: 100%;
@@ -268,6 +265,11 @@ nav{
   p{
     margin: 0;
   }
+  .blurb{
+    p{
+      margin-bottom: 15px;
+    }
+  }
   .copy{
     margin-bottom: 20px;
   }
@@ -279,11 +281,41 @@ nav{
   }
   .map{
     margin-bottom: 35px;
+    .title{
+      font-family: $header-font-stack;
+      font-size: 1.5em;
+    }
+  }
+  .where-when-details{
+    @media (min-width: 550px) {
+      min-width: 300px  
+    }
+  }
+  
+  .logistics{
+    @media (min-width: 550px) {
+      padding-left: 25px;
+      padding-top: 32px;
+      max-width: 300px;
+    }
   }
   .toronto, .manila{
     padding: 15px;
     background: #fbfbfb;
     margin-bottom: 20px;
+    
+  }
+  .toronto{
+    @media (min-width: 550px) {
+      display: flex;
+    }
+  }
+  .manila{
+    .lourdes, .balay{
+      @media (min-width: 550px) {
+        display: flex;
+      }
+    }
   }
 }
 

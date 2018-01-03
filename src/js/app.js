@@ -18,6 +18,7 @@ function eventHandlers () {
 
   const burger = document.getElementById('burger')
   const closeMe = document.getElementById('close-me')
+  const navLinks = document.querySelectorAll('nav.mobile-only ul a')
   burger.addEventListener('click', e => {
     e.preventDefault()
     burger.classList.toggle('hide')
@@ -29,6 +30,13 @@ function eventHandlers () {
     burger.classList.toggle('hide')
     closeMe.classList.toggle('hide')
     document.querySelectorAll('nav.mobile-only .container')[0].classList.toggle('add-flex')
+  })
+  navLinks.forEach(elem => {
+    elem.addEventListener('click', e => {
+      burger.classList.toggle('hide')
+      closeMe.classList.toggle('hide')
+      document.querySelectorAll('nav.mobile-only .container')[0].classList.toggle('add-flex')
+    })
   })
 };
 
