@@ -90,7 +90,10 @@ nav{
     color: $not-black;
     font-size: 1.5em;
     position: fixed;
-    padding: 20px;
+    padding: 5px;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.3);
   }
   .container{
     width: 100vw;
@@ -175,6 +178,25 @@ nav{
     span{
       color: $light-blue;
       font-size: .6em;
+    }
+  }
+  &.thanks{
+    .landing-blurb{
+      h2{
+        font-family: $body-font-stack;
+        text-transform: none;
+        font-size: 2em;
+      }
+      p{
+        font-family: $body-font-stack;
+        text-transform: none;
+        font-size: 1em;
+        position: static;
+      }
+      a{
+        font-family: $header-font-stack;
+        font-size: 1em;
+      }
     }
   }
 }
@@ -265,6 +287,14 @@ nav{
   p{
     margin: 0;
   }
+
+  h4{
+    img{
+      display: inline-block;
+      width: 50px;
+      margin-right: 10px;
+    }
+  } 
   .blurb{
     p{
       margin-bottom: 15px;
@@ -272,6 +302,11 @@ nav{
   }
   .copy{
     margin-bottom: 20px;
+    a{
+      display: inline;
+      color: $light-blue;
+      font-family: $header-font-stack;
+    }
   }
   .times{
     margin-bottom: 35px;
