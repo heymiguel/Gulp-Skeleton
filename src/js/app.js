@@ -2,7 +2,7 @@
 function eventHandlers () {
   const howMany = document.getElementsByName('numguests')
   const howManyField = document.getElementById('how-many')
-  howMany.forEach(elem => {
+  Array.from(howMany).forEach(elem => {
     elem.addEventListener('click', (e) => {
       howManyField.value = e.target.value
     })
@@ -10,7 +10,7 @@ function eventHandlers () {
 
   const where = document.getElementsByName('location')
   const whereField = document.getElementById('where')
-  where.forEach(elem => {
+  Array.from(where).forEach(elem => {
     elem.addEventListener('click', (e) => {
       whereField.value = e.target.value
     })
@@ -31,7 +31,7 @@ function eventHandlers () {
     closeMe.classList.toggle('hide')
     document.querySelectorAll('nav.mobile-only .container')[0].classList.toggle('add-flex')
   })
-  navLinks.forEach(elem => {
+  Array.from(navLinks).forEach(elem => {
     elem.addEventListener('click', e => {
       burger.classList.toggle('hide')
       closeMe.classList.toggle('hide')
