@@ -360,7 +360,64 @@ nav{
   }
 }
 
+// about-us
 
+#about-us{
+  background: $off-white;
+  h4{
+    font-family: $cursive-font-stack;
+    color: $dark-blue;
+    font-size: 8rem;
+  }
+  .photo-and-name{
+    img{
+      max-width: 300px;
+    }
+  }
+  .the-bride, .the-groom{
+    display: block;
+    
+    .description{
+      @media (min-width: 580px) {
+        margin-left: 25px;    
+      }
+      p{
+        // margin: 0;
+      }
+      li{
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        i{
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    .likes-dislikes{
+      margin: 10px 0;
+      p{
+        font-size: 1.3rem;
+      }
+    }
+    @media (min-width: 580px) {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
+footer{
+  background:#e8fdff;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+  p{
+    margin: 0;
+  }
+}
 
 // convenience 
 .mobile-only{
