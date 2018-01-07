@@ -110,7 +110,7 @@ nav{
     }
     @media (min-width: 550px) {
       height: 5vh;
-      background: white;
+      background: rgba(0,0,0,0);
       justify-content: flex-start;
       padding: 0 20px;
     }
@@ -181,6 +181,12 @@ nav{
     }
   }
   &.thanks{
+    text-align: left;
+    background-size: contain;
+    min-height: 60vh;
+    @media (min-width: 550px) {
+      text-align: right;
+    }
     .landing-blurb{
       h2{
         font-family: $body-font-stack;
