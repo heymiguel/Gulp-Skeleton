@@ -80,7 +80,8 @@ nav{
   }
   li{
     @media (min-width: 550px) {
-      margin: 1em;  
+      margin: .75rem 2rem;;  
+      font-size: 2rem;
     }
   }
   a{
@@ -88,7 +89,7 @@ nav{
   }
   .fa-bars{
     color: $not-black;
-    font-size: 1.5em;
+    font-size: 3.5rem;
     position: fixed;
     padding: 5px;
     top: 10px;
@@ -409,6 +410,14 @@ nav{
 }
 
 #registry{
+  img{
+    max-width: 300px;
+    border-radius: 10px;
+    @media (min-width: 500px) {
+      max-width: 400px;
+      
+    }
+  }
   .charities{ 
     width: 100%;
     display: block;
