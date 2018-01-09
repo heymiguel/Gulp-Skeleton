@@ -378,7 +378,7 @@ nav{
     display: block;
     
     .description{
-      @media (min-width: 580px) {
+      @media (min-width: 700px) {
         margin-left: 25px;    
       }
       p{
@@ -401,9 +401,27 @@ nav{
         font-size: 1.3rem;
       }
     }
-    @media (min-width: 580px) {
+    @media (min-width: 700px) {
       display: flex;
       justify-content: flex-start;
+    }
+  }
+}
+
+#registry{
+  .charities{ 
+    width: 100%;
+    display: block;
+    @media (min-width: 580px) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  a{
+    font-family: $header-font-stack;
+    display: block;
+    @media (min-width: 580px) {
+      display: inline-block;
     }
   }
 }
